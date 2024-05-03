@@ -20,7 +20,7 @@ function App() {
 
     socket.on('receive', (data) => {
       setMessages([...messages, data]);
-      alert(`${data.name} joined the chat`);
+      
     });
 
     return () => {

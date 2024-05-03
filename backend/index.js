@@ -6,7 +6,11 @@ const PORT = process.env.PORT || 8000;
 
 const app = express();
 const server = http.createServer(app);
-const io = socketIo(server);
+const io = socketIo(server,{
+    cors:{
+        origin:"*"
+    }
+});
 app.use(cors())
 const users = {};
 
